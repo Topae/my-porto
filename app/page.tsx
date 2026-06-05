@@ -120,7 +120,7 @@ export default function Home() {
               {[
                 {
                   company: "PT Menara Terus Makmur",
-                  role: "Software Engineer",
+                  role: "Fullstack Developer",
                   duration: "MAY 2026 - NOW",
                   desc: "Developed and enhanced web-based applications to support business digitalization and operational excellence initiatives.",
                 },

@@ -56,7 +56,7 @@ export default function Hero() {
                 Mustofa Khoirudin
               </h1>
               <p className="text-lg sm:text-xl font-bold text-blue-600 tracking-tight flex flex-wrap items-center gap-2">
-                <span>Software Engineer</span>
+                <span>Fullstack Developer</span>
                 <span className="text-slate-300">|</span>
                 <span>Enterprise Systems</span>
                 <span className="text-slate-300">|</span>
@@ -69,7 +69,7 @@ export default function Hero() {
             </p>
 
             <p className="text-base text-slate-500 leading-relaxed max-w-2xl">
-              Experienced Software Engineer focused on backend architecture, enterprise workflow systems, and real-time industrial applications. I build systems used in manufacturing, energy monitoring, procurement workflows, and healthcare operations.
+              Experienced Fullstack Developer focused on backend architecture, enterprise workflow systems, and real-time industrial applications. I build systems used in manufacturing, energy monitoring, procurement workflows, and healthcare operations.
             </p>
 
             {/* CTA Buttons */}
