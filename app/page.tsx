@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Server, Cpu, Activity, Briefcase } from "lucide-react";
+import { ArrowRight, Server, Cpu, Activity, Briefcase, FolderGit2, Globe, Layers } from "lucide-react";
 import Hero from "@/components/Hero";
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
               href="/projects"
               className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors group"
             >
-              Browse all 5 systems
+              Browse all 9 systems
               <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
@@ -49,10 +49,46 @@ export default function Home() {
                 tech: [".NET CORE", "SQL SERVER", "C#", "PYTHON"],
               },
               {
-                icon: <Server size={18} />,
+                icon: <Layers size={18} />,
                 title: "PT AICC (SHE Department)",
                 desc: "Developed and maintained digital solutions to support Safety, Health, and Environment (SHE) operations and compliance requirements.",
                 tech: ["PHP", "Laravel", "MySQL", "JavaScript"],
+              },
+              {
+                icon: <FolderGit2 size={18} />,
+                title: "Habbit Check",
+                desc: "Developed a web-based expert system application to analyze and evaluate student capabilities and habits using rule-based logic.",
+                tech: ["CodeIgniter 3", "PHP", "MySQL", "AJAX"],
+              },
+              {
+                icon: <Globe size={18} />,
+                title: "My Padi",
+                desc: "Developed a web-based expert system to identify and analyze rice plant health conditions based on symptom inputs and rule-based logic.",
+                tech: ["CodeIgniter 3", "PHP", "MySQL", "AJAX"],
+              },
+              {
+                icon: <Layers size={18} />,
+                title: "Oshitime",
+                desc: "Developed a web-based internal management system to handle approval workflows and multi-department coordination processes.",
+                tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS"],
+              },
+              {
+                icon: <Server size={18} />,
+                title: "SIM Klinik",
+                desc: "Developed a mobile-based clinic information management system (SIM Klinik) to support healthcare operational processes and patient data management.",
+                tech: ["Flutter", "Dart", "MySQL", "REST API"],
+              },
+              {
+                icon: <Server size={18} />,
+                title: "Klinik Kinasih",
+                desc: "Assisted in the development and maintenance of internal digital systems to support clinic operations, including patient data management.",
+                tech: ["CodeIgniter 3", "PHP", "MySQL", "Tailwind CSS"],
+              },
+              {
+                icon: <Globe size={18} />,
+                title: "B&B Tour and Travel",
+                desc: "Developed and maintained web-based applications to support travel and tourism business operations, including booking management.",
+                tech: ["CodeIgniter 3", "PHP", "MYSQL", "Tailwind CSS"],
               },
             ].map((proj, i) => (
               <div
