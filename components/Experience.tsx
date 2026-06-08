@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { Briefcase, Calendar, MapPin, Code, Cpu, Activity, Server, Globe } from "lucide-react";
+import { Briefcase, Calendar, MapPin, Code, Cpu } from "lucide-react";
 
 interface Job {
   company: string;
@@ -63,6 +64,38 @@ const jobHistory: Job[] = [
   },
 ];
 
+function getTechLogo(tech: string): string | null {
+  const t = tech.toLowerCase().trim();
+  if (t.includes("golang") || t === "go") return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg";
+  if (t.includes("php")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg";
+  if (t === "c#" || t.includes("csharp")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg";
+  if (t.includes("java") && !t.includes("script")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg";
+  if (t.includes("javascript") || t === "js") return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg";
+  if (t.includes("python")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg";
+  if (t.includes("c++") || t.includes("cplusplus")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg";
+  if (t.includes("laravel")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg";
+  if (t.includes("next.js") || t.includes("nextjs")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg";
+  if (t.includes("nest.js") || t.includes("nestjs")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg";
+  if (t.includes("dot-net") || t.includes(".net")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg";
+  if (t.includes("django")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg";
+  if (t.includes("vue")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg";
+  if (t.includes("codeigniter") || t.includes("code igniter")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg";
+  if (t.includes("mysql")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg";
+  if (t.includes("postgres") || t.includes("pgadmin")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg";
+  if (t.includes("sql server") || t.includes("microsoftsqlserver")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg";
+  if (t.includes("mongodb")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg";
+  if (t.includes("git")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg";
+  if (t.includes("docker")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg";
+  if (t.includes("linux")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg";
+  if (t.includes("windows")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg";
+  if (t.includes("tailwind")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg";
+  if (t.includes("css")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg";
+  if (t.includes("flutter")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg";
+  if (t.includes("dart")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg";
+  if (t.includes("nodered") || t.includes("node-red") || t.includes("node red")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodered/nodered-original.svg";
+  return null;
+}
+
 export default function Experience() {
   return (
     <section className="bg-slate-50/30 py-16 sm:py-24 relative overflow-hidden">
@@ -94,10 +127,50 @@ export default function Experience() {
               
               <div className="space-y-4">
                 {[
-                  { name: "Manufacturing & Assembly", percentage: "45%", icon: <Cpu size={14} className="text-blue-500" /> },
-                  { name: "Energy & Telemetry Analytics", percentage: "25%", icon: <Activity size={14} className="text-emerald-500" /> },
-                  { name: "Corporate Workflow & SHE Systems", percentage: "20%", icon: <Server size={14} className="text-indigo-500" /> },
-                  { name: "Healthcare & Travel Platforms", percentage: "10%", icon: <Globe size={14} className="text-purple-500" /> },
+                  {
+                    name: "Manufacturing & Assembly",
+                    percentage: "45%",
+                    icon: (
+                      <img
+                        src="https://api.iconify.design/lucide/factory.svg?color=%232563eb"
+                        alt="Manufacturing"
+                        className="w-3.5 h-3.5 object-contain"
+                      />
+                    ),
+                  },
+                  {
+                    name: "Energy & Telemetry Analytics",
+                    percentage: "25%",
+                    icon: (
+                      <img
+                        src="https://api.iconify.design/lucide/zap.svg?color=%2310b981"
+                        alt="Energy"
+                        className="w-3.5 h-3.5 object-contain"
+                      />
+                    ),
+                  },
+                  {
+                    name: "Corporate Workflow & SHE Systems",
+                    percentage: "20%",
+                    icon: (
+                      <img
+                        src="https://api.iconify.design/lucide/workflow.svg?color=%236366f1"
+                        alt="Workflow"
+                        className="w-3.5 h-3.5 object-contain"
+                      />
+                    ),
+                  },
+                  {
+                    name: "Healthcare & Travel Platforms",
+                    percentage: "10%",
+                    icon: (
+                      <img
+                        src="https://api.iconify.design/lucide/activity.svg?color=%23a855f7"
+                        alt="Healthcare"
+                        className="w-3.5 h-3.5 object-contain"
+                      />
+                    ),
+                  },
                 ].map((item, i) => (
                   <div key={i} className="space-y-1.5 group">
                     <div className="flex justify-between items-center text-xs font-semibold text-slate-700 group-hover:text-blue-650 transition-colors">
@@ -178,15 +251,22 @@ export default function Experience() {
 
                   {/* Tech Tags */}
                   <div className="flex flex-wrap gap-1.5 pt-2">
-                    {job.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-slate-50 border border-slate-200 text-slate-655 text-xs font-semibold hover:bg-blue-50 hover:text-blue-700 hover:border-blue-100 transition-all duration-200 cursor-default"
-                      >
-                        <Code size={10} className="text-slate-450" />
-                        {t}
-                      </span>
-                    ))}
+                    {job.tech.map((t) => {
+                      const logo = getTechLogo(t);
+                      return (
+                        <span
+                          key={t}
+                          className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-slate-50 border border-slate-200 text-slate-655 text-xs font-semibold hover:bg-blue-50 hover:text-blue-700 hover:border-blue-100 transition-all duration-200 cursor-default"
+                        >
+                          {logo ? (
+                            <img src={logo} alt={t} className="w-3 h-3 object-contain shrink-0 mr-1" />
+                          ) : (
+                            <Code size={10} className="text-slate-450 shrink-0 mr-1" />
+                          )}
+                          <span>{t}</span>
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
 

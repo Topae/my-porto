@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Code2, LayoutGrid, Database, Terminal, CheckCircle } from "lucide-react";
 
@@ -8,6 +9,7 @@ interface SkillCategory {
   skills: {
     name: string;
     level: "Core" | "Advanced" | "Proficient";
+    icon: React.ReactNode;
   }[];
 }
 
@@ -17,13 +19,83 @@ const skillCategories: SkillCategory[] = [
     icon: <Code2 size={20} />,
     description: "Multi-paradigm languages used for enterprise backend development and system integration.",
     skills: [
-      { name: "Golang", level: "Core" },
-      { name: "PHP", level: "Core" },
-      { name: "C#", level: "Core" },
-      { name: "Java", level: "Advanced" },
-      { name: "JavaScript", level: "Advanced" },
-      { name: "Python", level: "Proficient" },
-      { name: "C++", level: "Proficient" },
+      {
+        name: "Golang",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg"
+            alt="Golang"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "PHP",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+            alt="PHP"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "C#",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+            alt="C#"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Java",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+            alt="Java"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "JavaScript",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+            alt="JavaScript"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Python",
+        level: "Proficient",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+            alt="Python"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "C++",
+        level: "Proficient",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+            alt="C++"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
     ],
   },
   {
@@ -31,13 +103,83 @@ const skillCategories: SkillCategory[] = [
     icon: <LayoutGrid size={20} />,
     description: "Web application frameworks and backend engines supporting business architectures.",
     skills: [
-      { name: "Laravel", level: "Core" },
-      { name: "Next.js", level: "Advanced" },
-      { name: "NestJS", level: "Advanced" },
-      { name: ".NET", level: "Core" },
-      { name: "Django", level: "Proficient" },
-      { name: "Vue.js", level: "Proficient" },
-      { name: "CodeIgniter 3 & 4", level: "Core" },
+      {
+        name: "Laravel",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+            alt="Laravel"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Next.js",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+            alt="Next.js"
+            className="w-4 h-4 object-contain dark:invert"
+          />
+        ),
+      },
+      {
+        name: "NestJS",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg"
+            alt="NestJS"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: ".NET",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg"
+            alt=".NET"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Django",
+        level: "Proficient",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"
+            alt="Django"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Vue.js",
+        level: "Proficient",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
+            alt="Vue.js"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "CodeIgniter 3 & 4",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg"
+            alt="CodeIgniter"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
     ],
   },
   {
@@ -45,10 +187,50 @@ const skillCategories: SkillCategory[] = [
     icon: <Database size={20} />,
     description: "Relational database engines, schemas, and document store clusters.",
     skills: [
-      { name: "MySQL", level: "Core" },
-      { name: "PostgreSQL", level: "Core" },
-      { name: "SQL Server", level: "Core" },
-      { name: "MongoDB", level: "Advanced" },
+      {
+        name: "MySQL",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+            alt="MySQL"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "PostgreSQL",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+            alt="PostgreSQL"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "SQL Server",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+            alt="SQL Server"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "MongoDB",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+            alt="MongoDB"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
     ],
   },
   {
@@ -56,10 +238,50 @@ const skillCategories: SkillCategory[] = [
     icon: <Terminal size={20} />,
     description: "Infrastructure management, containerization platforms, and source control.",
     skills: [
-      { name: "Git (GitHub, GitLab)", level: "Core" },
-      { name: "Docker", level: "Advanced" },
-      { name: "Linux Server", level: "Core" },
-      { name: "Windows Server", level: "Core" },
+      {
+        name: "Git (GitHub, GitLab)",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+            alt="Git"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Docker",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+            alt="Docker"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Linux Server",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+            alt="Linux Server"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Windows Server",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg"
+            alt="Windows Server"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
     ],
   },
 ];
@@ -113,8 +335,9 @@ export default function Skills() {
                       className="space-y-1.5 py-2.5 px-3.5 rounded-xl bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-slate-200/80 border border-slate-100/40 hover:translate-x-1 transition-all duration-200 group"
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-semibold text-slate-800 group-hover:text-blue-650 transition-colors">
-                          {skill.name}
+                        <span className="text-sm font-semibold text-slate-800 group-hover:text-blue-650 transition-colors flex items-center gap-2">
+                          <span className="shrink-0 flex items-center justify-center">{skill.icon}</span>
+                          <span>{skill.name}</span>
                         </span>
                         <span
                           className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded transition-all duration-300 ${
