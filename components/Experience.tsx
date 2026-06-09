@@ -51,17 +51,6 @@ const jobHistory: Job[] = [
     ],
     tech: ["Code Igniter 3", "PHP", "MYSQL", "Tailwind CSS", "AJAX", "SSO"],
   },
-  {
-    company: "Klinik Kinasih",
-    role: "Web System Developer",
-    location: "Indonesia",
-    duration: "JUN 2021 - JUN 2022",
-    description: "Built clinic management system for patient and operational workflows.",
-    bullets: [
-      "Created electronic medical records (EMR) system and doctor scheduling queue tools. Implemented security controls on patient medical records in compliance with operational guidelines.",
-    ],
-    tech: ["Code Igniter 3", "PHP", "MySQL", "Tailwind CSS", "AJAX"],
-  },
 ];
 
 function getTechLogo(tech: string): string | null {

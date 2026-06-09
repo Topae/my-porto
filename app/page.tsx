@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Server, Cpu, Activity, Briefcase, FolderGit2, Globe, Layers } from "lucide-react";
+import { ArrowRight, Server, Cpu, Activity, Briefcase, Globe, Layers } from "lucide-react";
 import Hero from "@/components/Hero";
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
               href="/projects"
               className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors group"
             >
-              Browse all 9 systems
+              Browse all 7 systems
               <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
@@ -39,56 +39,44 @@ export default function Home() {
               {
                 icon: <Cpu size={18} />,
                 title: "PT Menara Terus Makmur",
-                desc: "Developed and maintained digitalization applications to improve operational efficiency, document management, and workplace safety processes.",
-                tech: ["Nest.js", "Next.js", "JavaScript", "NodeRed"],
+                desc: "Developed and maintained enterprise web applications to support business digitalization, operational excellence, and process automation initiatives.",
+                tech: ["Nest.js", "Next.js", "Vue.js", "JavaScript"],
               },
               {
                 icon: <Activity size={18} />,
-                title: "PT GS Battery",
-                desc: "Monitored and analyzed energy consumption data to support efficiency and cost optimization initiatives.",
-                tech: [".NET CORE", "SQL SERVER", "C#", "PYTHON"],
-              },
-              {
-                icon: <Layers size={18} />,
-                title: "PT AICC (SHE Department)",
-                desc: "Developed and maintained digital solutions to support Safety, Health, and Environment (SHE) operations and compliance requirements.",
-                tech: ["PHP", "Laravel", "MySQL", "JavaScript"],
-              },
-              {
-                icon: <FolderGit2 size={18} />,
-                title: "Habbit Check",
-                desc: "Developed a web-based expert system application to analyze and evaluate student capabilities and habits using rule-based logic.",
-                tech: ["CodeIgniter 3", "PHP", "MySQL", "AJAX"],
-              },
-              {
-                icon: <Globe size={18} />,
-                title: "My Padi",
-                desc: "Developed a web-based expert system to identify and analyze rice plant health conditions based on symptom inputs and rule-based logic.",
-                tech: ["CodeIgniter 3", "PHP", "MySQL", "AJAX"],
-              },
-              {
-                icon: <Layers size={18} />,
-                title: "Oshitime",
-                desc: "Developed a web-based internal management system to handle approval workflows and multi-department coordination processes.",
-                tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS"],
-              },
-              {
-                icon: <Server size={18} />,
-                title: "SIM Klinik",
-                desc: "Developed a mobile-based clinic information management system (SIM Klinik) to support healthcare operational processes and patient data management.",
-                tech: ["Flutter", "Dart", "MySQL", "REST API"],
-              },
-              {
-                icon: <Server size={18} />,
-                title: "Klinik Kinasih",
-                desc: "Assisted in the development and maintenance of internal digital systems to support clinic operations, including patient data management.",
-                tech: ["CodeIgniter 3", "PHP", "MySQL", "Tailwind CSS"],
+                title: "PT GS Battery Karawang Plant",
+                desc: "Developed and maintained enterprise-grade applications using C# (.NET) to support manufacturing operations, production monitoring, and business-critical data management processes.",
+                tech: [".NET CORE", "C#", "SQL SERVER", "Vue.js"],
               },
               {
                 icon: <Globe size={18} />,
                 title: "B&B Tour and Travel",
-                desc: "Developed and maintained web-based applications to support travel and tourism business operations, including booking management.",
-                tech: ["CodeIgniter 3", "PHP", "MYSQL", "Tailwind CSS"],
+                desc: "Developed and enhanced web-based applications supporting booking management, customer relationship processes, and day-to-day business operations.",
+                tech: ["Vue.js", "JavaScript", "PHP", "MySQL"],
+              },
+              {
+                icon: <Layers size={18} />,
+                title: "PT AICC — SHE Department",
+                desc: "A web-based application developed to streamline internal operational workflows within the Safety, Health, and Environment (SHE) department.",
+                tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS"],
+              },
+              {
+                icon: <Globe size={18} />,
+                title: "MyPadi",
+                desc: "A web-based expert system developed to assist farmers in identifying rice plant diseases and obtaining treatment recommendations through a rule-based diagnostic approach.",
+                tech: ["Laravel", "MySQL", "Tailwind CSS", "JavaScript"],
+              },
+              {
+                icon: <Server size={18} />,
+                title: "SIM Klinik",
+                desc: "A mobile healthcare management application designed to support clinic operations by digitizing patient administration, medical records, and appointment scheduling.",
+                tech: ["Flutter", "MySQL", "REST API"],
+              },
+              {
+                icon: <Layers size={18} />,
+                title: "OshiTime",
+                desc: "An internal business application designed to streamline approval workflows and enhance operational efficiency across multiple departments.",
+                tech: ["Laravel", "MySQL", "Tailwind CSS", "JavaScript"],
               },
             ].map((proj, i) => (
               <div
@@ -156,15 +144,15 @@ export default function Home() {
               {[
                 {
                   company: "PT Menara Terus Makmur",
-                  role: "Fullstack Developer",
+                  role: "Software Engineer",
                   duration: "MAY 2026 - NOW",
-                  desc: "Developed and enhanced web-based applications to support business digitalization and operational excellence initiatives.",
+                  desc: "Developed and maintained enterprise web applications to support business digitalization, operational excellence, and process automation initiatives.",
                 },
                 {
                   company: "PT GS BATTERY KARAWANG PLANT",
                   role: "Internship",
                   duration: "SEPT 2025 - FEB 2026",
-                  desc: "Assisted in developing and maintaining internal web-based applications using C# (.NET) to support operational and production data management.",
+                  desc: "Developed and maintained enterprise-grade applications using C# (.NET) to support manufacturing operations, production monitoring, and business-critical data management processes.",
                 },
               ].map((job, i) => (
                 <div
