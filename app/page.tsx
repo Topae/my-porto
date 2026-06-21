@@ -129,6 +129,23 @@ export default function Home() {
               <p className="text-sm text-slate-500 leading-relaxed">
                 I operate in environments requiring absolute reliability, deploying backend codebases and operational panels to coordinate workflows and energy monitoring systems.
               </p>
+              <div className="space-y-2.5 pt-2">
+                {[
+                  "Built 10+ web applications and internal business systems",
+                  "Developed manufacturing monitoring and production management solutions",
+                  "Experienced in end-to-end software development lifecycle",
+                  "Delivered systems used by multiple business departments",
+                ].map((achievement, idx) => (
+                  <div key={idx} className="flex items-start gap-2.5">
+                    <span className="h-5 w-5 rounded-full bg-blue-50 flex items-center justify-center shrink-0 text-blue-600 mt-0.5">
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
+                    </span>
+                    <span className="text-xs text-slate-600 leading-relaxed font-medium">
+                      {achievement}
+                    </span>
+                  </div>
+                ))}
+              </div>
               <div className="pt-2">
                 <Link
                   href="/experience"

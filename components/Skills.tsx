@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { Code2, LayoutGrid, Database, Terminal, CheckCircle } from "lucide-react";
+import { Code, LayoutGrid, Database, Terminal, CheckCircle, Server, Layers, Factory } from "lucide-react";
 
 interface SkillCategory {
   title: string;
@@ -16,7 +16,7 @@ interface SkillCategory {
 const skillCategories: SkillCategory[] = [
   {
     title: "Programming Languages",
-    icon: <Code2 size={20} />,
+    icon: <Code size={20} />,
     description: "Multi-paradigm languages used for enterprise backend development and system integration.",
     skills: [
       {
@@ -231,6 +231,72 @@ const skillCategories: SkillCategory[] = [
           />
         ),
       },
+      {
+        name: "Database Design",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/table-properties.svg?color=%232563eb"
+            alt="Database Design"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Query Optimization",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/zap.svg?color=%232563eb"
+            alt="Query Optimization"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Stored Procedure",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/binary.svg?color=%232563eb"
+            alt="Stored Procedure"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Database Normalization",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/columns-3.svg?color=%2310b981"
+            alt="Database Normalization"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Redis",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
+            alt="Redis"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "InfluxDB",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/influxdb/influxdb-original.svg"
+            alt="InfluxDB"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
     ],
   },
   {
@@ -239,12 +305,34 @@ const skillCategories: SkillCategory[] = [
     description: "Infrastructure management, containerization platforms, and source control.",
     skills: [
       {
-        name: "Git (GitHub, GitLab)",
+        name: "Git",
         level: "Core",
         icon: (
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
             alt="Git"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "GitHub",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+            alt="GitHub"
+            className="w-4 h-4 object-contain dark:invert"
+          />
+        ),
+      },
+      {
+        name: "GitLab",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg"
+            alt="GitLab"
             className="w-4 h-4 object-contain"
           />
         ),
@@ -278,6 +366,320 @@ const skillCategories: SkillCategory[] = [
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg"
             alt="Windows Server"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Nginx",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg"
+            alt="Nginx"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "CI/CD",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/git-compare.svg?color=%2310b981"
+            alt="CI/CD"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Linux Server Administration",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/terminal.svg?color=%232563eb"
+            alt="Linux Server Administration"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "VPS Deployment",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/cloud-upload.svg?color=%232563eb"
+            alt="VPS Deployment"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+    ],
+  },
+  {
+    title: "Backend & API",
+    icon: <Server size={20} />,
+    description: "Design and implementation of secure, real-time, and high-performance API services.",
+    skills: [
+      {
+        name: "REST API",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/route.svg?color=%232563eb"
+            alt="REST API"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "JWT Authentication",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/key-round.svg?color=%232563eb"
+            alt="JWT Authentication"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Swagger / OpenAPI",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/file-json.svg?color=%2310b981"
+            alt="Swagger / OpenAPI"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "WebSocket",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/radio.svg?color=%2310b981"
+            alt="WebSocket"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Microservices",
+        level: "Proficient",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/boxes.svg?color=%2364748b"
+            alt="Microservices"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Clean Architecture",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/layers.svg?color=%232563eb"
+            alt="Clean Architecture"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Design Patterns",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/git-commit.svg?color=%232563eb"
+            alt="Design Patterns"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "gRPC",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/cable.svg?color=%2310b981"
+            alt="gRPC"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+    ],
+  },
+  {
+    title: "Architecture",
+    icon: <Layers size={20} />,
+    description: "System planning, software design patterns, and access control governance.",
+    skills: [
+      {
+        name: "System Design",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/network.svg?color=%232563eb"
+            alt="System Design"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Software Architecture",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/git-fork.svg?color=%232563eb"
+            alt="Software Architecture"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Role-Based Access Control (RBAC)",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/shield-check.svg?color=%232563eb"
+            alt="RBAC"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Business Process Automation",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/workflow.svg?color=%232563eb"
+            alt="Business Process Automation"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Workflow Management System",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/git-branch.svg?color=%232563eb"
+            alt="Workflow Management System"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+    ],
+  },
+  {
+    title: "Manufacturing & Enterprise Solutions",
+    icon: <Factory size={20} />,
+    description: "Domain expertise in industrial operations, logistics, and production planning.",
+    skills: [
+      {
+        name: "Production Monitoring System",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/activity.svg?color=%232563eb"
+            alt="Production Monitoring System"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Work Order Management",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/clipboard-list.svg?color=%232563eb"
+            alt="Work Order Management"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "PPIC System",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/calendar-days.svg?color=%232563eb"
+            alt="PPIC System"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Inventory Management",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/package.svg?color=%232563eb"
+            alt="Inventory Management"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Predictive Maintenance",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/wrench.svg?color=%2310b981"
+            alt="Predictive Maintenance"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Business Process Optimization",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/trending-up.svg?color=%232563eb"
+            alt="Business Process Optimization"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+    ],
+  },
+  {
+    title: "Testing & Quality",
+    icon: <CheckCircle size={20} />,
+    description: "Software quality assurance, verification systems, and API testing suites.",
+    skills: [
+      {
+        name: "Postman",
+        level: "Core",
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+            alt="Postman"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "API Testing",
+        level: "Core",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/test-tube-2.svg?color=%232563eb"
+            alt="API Testing"
+            className="w-4 h-4 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Unit Testing",
+        level: "Advanced",
+        icon: (
+          <img
+            src="https://api.iconify.design/lucide/check-square-2.svg?color=%2310b981"
+            alt="Unit Testing"
             className="w-4 h-4 object-contain"
           />
         ),

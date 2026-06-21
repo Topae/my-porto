@@ -36,6 +36,9 @@ export default function About() {
                 Throughout my career, I have gained hands-on experience in multiple sectors, including manufacturing, energy monitoring, healthcare administration, and corporate business workflows. I focus heavily on writing clean, maintainable code, building robust database models, and ensuring maximum uptime for systems that directly impact daily business operations.
               </p>
               <p>
+                I actively apply Business Process Improvement (BPI) methodologies to my engineering workflow. By analyzing operational bottlenecks and mapping existing workflows, I design and implement automated software solutions that significantly reduce processing times, eliminate redundant administrative tasks, and enhance overall business productivity.
+              </p>
+              <p>
                 In addition to software engineering, I am passionate about optimizing database queries and implementing secure networking protocols to safeguard industrial data transmissions. I continuously explore new technologies in automation and cloud infrastructure to deliver state-of-the-art solutions that stand the test of time.
               </p>
             </div>
@@ -133,12 +136,12 @@ export default function About() {
             </div>
 
             {/* Visual Flow diagram */}
-            <div className="space-y-5 relative z-10">
+            <div className="space-y-4 relative z-10">
               
               {/* Box 1: Edge Equipment */}
-              <div className="bg-slate-50/50 p-4 rounded-xl border border-slate-100 flex items-center justify-between shadow-sm hover:border-blue-200 hover:bg-white hover:scale-[1.01] transition-all duration-300 group">
+              <div className="bg-slate-50/50 p-4 rounded-xl border border-slate-100 border-l-4 border-l-amber-500 flex items-center justify-between shadow-sm hover:border-slate-200 hover:border-l-amber-500 hover:bg-white hover:scale-[1.01] transition-all duration-300 group">
                 <div>
-                  <span className="text-[9px] text-slate-400 block font-semibold uppercase tracking-wider">
+                  <span className="text-[9px] text-amber-600 block font-bold uppercase tracking-wider">
                     Layer 01: OT / Factory Floor
                   </span>
                   <span className="text-xs font-bold text-slate-800">
@@ -151,60 +154,60 @@ export default function About() {
               </div>
 
               {/* Arrow */}
-              <div className="flex justify-center -my-3">
-                <div className="h-6 w-0.5 bg-linear-to-b from-blue-400 to-blue-600 relative">
-                  <ChevronRight size={10} className="absolute -bottom-1 left-[-4px] rotate-90 text-blue-600 animate-bounce" />
+              <div className="flex justify-center -my-2.5">
+                <div className="h-5 w-0.5 bg-slate-200 relative">
+                  <ChevronRight size={10} className="absolute -bottom-1 left-[-4px] rotate-90 text-slate-400 animate-bounce" />
                 </div>
               </div>
 
               {/* Box 2: Gateway Node */}
-              <div className="bg-linear-to-r from-blue-600 to-indigo-600 p-4 rounded-xl text-white flex items-center justify-between shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/30 hover:scale-[1.01] transition-all duration-300">
+              <div className="bg-slate-50/50 p-4 rounded-xl border border-slate-100 border-l-4 border-l-blue-600 flex items-center justify-between shadow-sm hover:border-slate-200 hover:border-l-blue-600 hover:bg-white hover:scale-[1.01] transition-all duration-300 group">
                 <div>
-                  <span className="text-[9px] text-blue-200 block font-semibold uppercase tracking-wider">
+                  <span className="text-[9px] text-blue-600 block font-bold uppercase tracking-wider">
                     Layer 02: Integration Gateway
                   </span>
-                  <span className="text-xs font-bold">
+                  <span className="text-xs font-bold text-slate-800">
                     Backend Middleware (Golang / .NET / Laravel)
                   </span>
                 </div>
-                <span className="px-2 py-0.5 rounded bg-white/20 text-[9px] font-bold text-white border border-white/10">
+                <span className="px-2 py-0.5 rounded bg-blue-50 text-[9px] font-bold text-blue-700 border border-blue-100 group-hover:bg-blue-100 transition-colors">
                   Data Broker
                 </span>
               </div>
 
               {/* Arrow */}
-              <div className="flex justify-center -my-3">
-                <div className="h-6 w-0.5 bg-linear-to-b from-blue-600 to-slate-400 relative">
-                  <ChevronRight size={10} className="absolute -bottom-1 left-[-4px] rotate-90 text-slate-500 animate-bounce" style={{ animationDelay: "1s" }} />
+              <div className="flex justify-center -my-2.5">
+                <div className="h-5 w-0.5 bg-slate-200 relative">
+                  <ChevronRight size={10} className="absolute -bottom-1 left-[-4px] rotate-90 text-slate-400 animate-bounce" style={{ animationDelay: "0.5s" }} />
                 </div>
               </div>
 
               {/* Box 3: Enterprise DB */}
-              <div className="bg-slate-50/50 p-4 rounded-xl border border-slate-100 flex items-center justify-between shadow-sm hover:border-blue-200 hover:bg-white hover:scale-[1.01] transition-all duration-300 group">
+              <div className="bg-slate-50/50 p-4 rounded-xl border border-slate-100 border-l-4 border-l-indigo-500 flex items-center justify-between shadow-sm hover:border-slate-200 hover:border-l-indigo-500 hover:bg-white hover:scale-[1.01] transition-all duration-300 group">
                 <div>
-                  <span className="text-[9px] text-slate-400 block font-semibold uppercase tracking-wider">
+                  <span className="text-[9px] text-indigo-600 block font-bold uppercase tracking-wider">
                     Layer 03: Storage & Logic
                   </span>
                   <span className="text-xs font-bold text-slate-800">
                     Databases (PostgreSQL, MySQL, SQL Server)
                   </span>
                 </div>
-                <span className="px-2 py-0.5 rounded bg-blue-50 text-[9px] font-bold text-blue-700 border border-blue-100 group-hover:bg-blue-100 transition-colors">
+                <span className="px-2 py-0.5 rounded bg-indigo-50 text-[9px] font-bold text-indigo-700 border border-indigo-100 group-hover:bg-indigo-100 transition-colors">
                   Transact-SQL
                 </span>
               </div>
 
               {/* Arrow */}
-              <div className="flex justify-center -my-3">
-                <div className="h-6 w-0.5 bg-linear-to-b from-slate-400 to-emerald-600 relative">
-                  <ChevronRight size={10} className="absolute -bottom-1 left-[-4px] rotate-90 text-emerald-600 animate-bounce" style={{ animationDelay: "2s" }} />
+              <div className="flex justify-center -my-2.5">
+                <div className="h-5 w-0.5 bg-slate-200 relative">
+                  <ChevronRight size={10} className="absolute -bottom-1 left-[-4px] rotate-90 text-slate-400 animate-bounce" style={{ animationDelay: "1s" }} />
                 </div>
               </div>
 
               {/* Box 4: Client View */}
-              <div className="bg-slate-50/50 p-4 rounded-xl border border-slate-100 flex items-center justify-between shadow-sm hover:border-emerald-200 hover:bg-white hover:scale-[1.01] transition-all duration-300 group">
+              <div className="bg-slate-50/50 p-4 rounded-xl border border-slate-100 border-l-4 border-l-emerald-500 flex items-center justify-between shadow-sm hover:border-slate-200 hover:border-l-emerald-500 hover:bg-white hover:scale-[1.01] transition-all duration-300 group">
                 <div>
-                  <span className="text-[9px] text-slate-400 block font-semibold uppercase tracking-wider">
+                  <span className="text-[9px] text-emerald-600 block font-bold uppercase tracking-wider">
                     Layer 04: UI / Dashboard
                   </span>
                   <span className="text-xs font-bold text-slate-800">
